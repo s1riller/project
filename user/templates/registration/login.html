@@ -1,0 +1,17 @@
+
+
+{% block content %}
+    <a href="{% url 'signup' %}">Sign Up</a>
+    <a href="{% url 'home' %}">Home</a>
+
+    <form method="post">
+      {% csrf_token %}
+      <table>
+        {{ form.as_p }}
+        <tr>
+          <td>&nbsp;</td>
+          <td><input type="submit" value="Submit"></td>
+        </tr>
+      </table>
+    </form>
+{% endblock %}

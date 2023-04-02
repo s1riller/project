@@ -16,8 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from main.views import index
+from main.views import *
 
 urlpatterns = [
-    path('',index,name='index')
+    path('',Index.as_view(),name='register'),
+    path('contact/',contact_view, name='contact'),
 ]

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contact List</title>
+</head>
+<body>
+    <h1>Contact List</h1>
+    <ul>
+        {% for contact in contacts %}
+            <li>{{ contact.phone_number }} - {{ contact.email }} - {{ contact.address }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
